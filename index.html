@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wish Bucket</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
+    ">
+
+
+    <link rel="stylesheet" href="css/docs.theme.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <script src="script/jquery.min.js"></script>
+    <script src="script/owl.carousel.js"></script>
+</head>
+
+<body>
+
+
+    <!--************************ navbar *************************-->
+
+    <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
+        <div class="container-xl">
+            <a class="navbar-brand" href="#">
+                <img src="Logo/New Project.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                        <div class="nav-item dropdown-menu">
+                            <ul>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+
+                            </ul>
+                            <ul>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+
+                            </ul>
+                            <ul>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                    <!-- search -->
+
+
+                    <div class="search-and-icons">
+                        <form class="d-flex mb-2 me-2" role="search">
+                            <input class="form-control me-2" type="search" aria-label="Search" placeholder="Search">
+                        </form>
+                        <div class="user-icons d-flex mb-2">
+
+                            <div class="wishlist"><i class="bi bi-heart"></i></div>
+                            <div class="cart"><i class="bi bi-cart3"></i></div>
+                        </div>
+                    </div>
+
+                </ul>
+                <!-- search -->
+                <div class="contact-info d-md-flex">
+                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'));</script></a> </p>
+                    <button onclick="logout();" id="logoutBtn">Logout</button>
+
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!--************************ navbarend *************************-->
+
+
+
+
+    <!--************************* main-carousel *******************-->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide main-slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-BirthdayBash-5080.gif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/29032023-UHP-D-Main-P2-SummerEssentials-DNMXNetplay-Upto70.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/29032023-UHP-D-Main-P3-Wardrobe-AksDOO-Flat50.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/29032023-UHP-D-Main-P5-AxMns-Min40Extra35.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--************************* main-carouselEnd *******************-->
+
+
+    <!--******************** discount-carousel *********************-->
+
+    <div id="hello" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/IDBI-1440x128-23.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://assets.ajio.com/cms/AJIO/WEB/Citibank_1440x128-new.jpg" class="d-block w-100" alt="...">
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hello" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hello" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!--******************** discount-carouselEnd *********************-->
+    <div class="container-fluid">
+        <section id="demos">
+
+
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-Premiumpicks-P1-Min60.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-PremiumPicks-AldoSteveMadden-3050.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-PremiumPicks-GuessKennethCole-Upto60ff.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-PremiumPicks-Superdry-BHPC-3050-Revised%20.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="https://assets.ajio.com/cms/AJIO/WEB/D-UHP-PremiumPicks-Superdry-BHPC-3050-Revised%20.jpg" alt="">
+                </div>
+
+            </div>
+
+
+
+
+
+    </div>
+
+
+
+    </section>
+
+    </div>
+
+
+
+    <!--********************************** footer *********************************-->
+    <section class="footer-sec">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-2">
+                        <h5>Section</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4 offset-1">
+                        <form>
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>Monthly digest of whats new and exciting from us.</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <p>© 2021 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+
+    <!--********************************** footerEnd *********************************-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 4,
+                        nav: true,
+                        loop: false,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
+    <script src="script/index.js"></script>
+</body>
+
+</html>
