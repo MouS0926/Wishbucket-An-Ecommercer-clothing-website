@@ -12,8 +12,10 @@ logform.addEventListener("submit", function(e) {
         return ele.email == emailIn.value && ele.password == passwordIn.value
     })
 
+    let loginStatus = false
     if (exist) {
         alert("SignedIn Successfully")
+        loginStatus = true
 
         let current_user = regData.filter(function(el) {
             return el.email == emailIn.value && el.password == passwordIn.value

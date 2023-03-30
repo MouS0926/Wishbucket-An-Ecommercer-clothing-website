@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wish Bucket</title>
+    <title>Wish Bucket | Product</title>
 
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
     ">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/product.css">
+
 
 </head>
 
@@ -30,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" aria-hidden="true"></i>Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -101,22 +102,22 @@
 
                     <div class="search-and-icons">
                         <form class="d-flex mb-2 me-2" role="search">
-                            <input class="form-control me-2" type="search" aria-label="Search" placeholder="Search">
+                            <input class="form-control me-2" type="search" aria-label="Search" id="search" placeholder="Search">
                         </form>
                         <div class="user-icons d-flex mb-2">
 
-                            <div class="wishlist"><i class="bi bi-heart"></i></div>
-                            <div class="cart"><i class="bi bi-cart3"></i></div>
+                            <a href="" class="wishlist"><i class="bi bi-heart"></i></a>
+                            <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
                         </div>
                     </div>
 
                 </ul>
                 <!-- search -->
                 <div class="contact-info d-md-flex">
-                    <p><a href="register.html">Sign In/Register</a> </p>
-                    <p>
-                        <a href=""></a>
-                    </p>
+                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'));</script></a> </p>
+
+                    <p><a href="" onclick="logout();" id="logoutBtn">Logout</a> </p>
+
                 </div>
             </div>
 
@@ -125,40 +126,54 @@
     </nav>
 
     <!--************************ navbarend *************************-->
-    <section class="register-form">
+
+    <section class="product-section">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row ">
 
-                <div class="col-md-8 offset-2">
-                    <form id="regisFrom">
+                <div class="col-md-6">
+                    <div class="row" id="cart-row">
+
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="Image/Product/Women/10.jpg" alt="" style="width:100%">
+                                </div>
 
 
-                        <div class="mb-3">
-                            <label for="" class="form-label">Enter Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Name">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <p>brand-totle title</p>
+                                        <p>details Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+
+                                    <div class="prod-detail" style="display:flex;">
+
+                                        <button>+</button>
+                                        <span>10</span>
+                                        <button>+</button>
+                                        <h5>price:100</h5>
+                                        <button>delete</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="" class="form-label">Enter Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Email">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Enter Your Password</label>
-                            <input type="password" id="psw" class="form-control" placeholder="Password">
-                        </div>
-
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <p>Already a member? <a href="login.html">Sign In</a></p>
-                    </form>
-
-
+                    </div>
                 </div>
-            </div>
 
+                <div class="col-md-4"></div>
+            </div>
         </div>
     </section>
+
+
 
 
 
@@ -236,7 +251,10 @@
 
     <!--********************************** footerEnd *********************************-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="script/register.js"></script>
+
+    <!-- <script src="script/index.js"></script> -->
+    <script src="script/product.js"></script>
+    <script src="script/cart.js"></script>
 </body>
 
 </html>
