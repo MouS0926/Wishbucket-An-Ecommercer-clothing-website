@@ -107,7 +107,7 @@
 
                     <div class="search-and-icons">
                         <form class="d-flex mb-2 me-2" role="search">
-                            <input class="form-control me-2" type="search" aria-label="Search" placeholder="Search">
+                            <input class="form-control me-2" type="search" id="search" aria-label="Search" placeholder="Search">
                         </form>
                         <div class="user-icons d-flex mb-2">
 
@@ -119,8 +119,9 @@
                 </ul>
                 <!-- search -->
                 <div class="contact-info d-md-flex">
-                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'));</script></a> </p>
-                    <button onclick="logout();" id="logoutBtn">Logout</button>
+                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'))</script></a> </p>
+
+                    <p><a href="" onclick="logout();" id="logoutBtn">Logout</a> </p>
 
                 </div>
             </div>

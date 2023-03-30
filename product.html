@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wish Bucket</title>
+    <title>Wish Bucket | Product</title>
 
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
     ">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/product.css">
+
 
 </head>
 
@@ -30,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" aria-hidden="true"></i>Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -101,7 +102,7 @@
 
                     <div class="search-and-icons">
                         <form class="d-flex mb-2 me-2" role="search">
-                            <input class="form-control me-2" type="search" aria-label="Search" placeholder="Search">
+                            <input class="form-control me-2" type="search" aria-label="Search" id="search" placeholder="Search">
                         </form>
                         <div class="user-icons d-flex mb-2">
 
@@ -113,10 +114,10 @@
                 </ul>
                 <!-- search -->
                 <div class="contact-info d-md-flex">
-                    <p><a href="register.html">Sign In/Register</a> </p>
-                    <p>
-                        <a href=""></a>
-                    </p>
+                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'));</script></a> </p>
+
+                    <p><a href="" onclick="logout();" id="logoutBtn">Logout</a> </p>
+
                 </div>
             </div>
 
@@ -125,40 +126,67 @@
     </nav>
 
     <!--************************ navbarend *************************-->
-    <section class="register-form">
+
+    <section class="product-section">
         <div class="container-fluid">
             <div class="row">
+                <div class="col-md-3">
+                    <!--========= brand ===========-->
 
-                <div class="col-md-8 offset-2">
-                    <form id="regisFrom">
-
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Enter Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Name">
+                    <h5>Brand</h5>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="aks" id="aks">
+                            <label for="starting">AKS</label>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="" class="form-label">Enter Your Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Email">
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="jk" id="jk">
+                            <label for="reserves">JAIPUR KURTI</label>
                         </div>
+                    </div>
+                    <!--============= brandend =================-->
 
-                        <div class="mb-3">
-                            <label for="" class="form-label">Enter Your Password</label>
-                            <input type="password" id="psw" class="form-control" placeholder="Password">
+
+                    <!--========= brand ===========-->
+                    <h5>Category</h5>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="kurta" id="kurta">
+                            <label for="starting">Kurtas & Kurtis  </label>
                         </div>
-
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <p>Already a member? <a href="login.html">Sign In</a></p>
-                    </form>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="top" id="top">
+                            <label for="reserves">Tops</label>
+                        </div>
+                    </div>
+                    <!--============= brandend =================-->
 
 
                 </div>
-            </div>
+                <div class="col-md-9">
 
+                    <div class="row">
+                        <div class="col-md-6"><span id="total-product"></span> Items Found</div>
+                        <div class="col-md-6">
+                            <select id="sortprice">
+                                <option value="">Select Price</option>
+                                <option value="htl">Price(Higest First) </option>
+                                <option value="lth">Price(Lowest First)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row" id="product-row">
+
+
+
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
 
 
 
@@ -236,7 +264,10 @@
 
     <!--********************************** footerEnd *********************************-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="script/register.js"></script>
+
+    <!-- <script src="script/index.js"></script> -->
+    <script src="script/product.js"></script>
+
 </body>
 
 </html>
