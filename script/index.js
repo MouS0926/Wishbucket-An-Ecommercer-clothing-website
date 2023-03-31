@@ -7,5 +7,5 @@
  function logout() {
      localStorage.removeItem('user-name');
      localStorage.removeItem('user-email');
-     //  logoutbtn.innerHTML = null
+     //  logoutbtn.innerText = ""
  }

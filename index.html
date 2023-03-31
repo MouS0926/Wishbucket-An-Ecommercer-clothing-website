@@ -12,12 +12,18 @@
     ">
 
 
+
     <link rel="stylesheet" href="css/docs.theme.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <script src="script/jquery.min.js"></script>
     <script src="script/owl.carousel.js"></script>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +33,7 @@
 
     <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
         <div class="container-xl">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="Logo/New Project.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,12 +42,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="product.html">WOMEN</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MEN</a>
+                    </li>
+
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
@@ -54,6 +64,7 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
@@ -98,7 +109,7 @@
 
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
 
 
 
@@ -119,7 +130,10 @@
                 </ul>
                 <!-- search -->
                 <div class="contact-info d-md-flex">
-                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'))</script></a> </p>
+                    <p><a href="register.html" id="userN">Sign In/Register </a>
+
+                    </p>
+                    <p id="cname"></p>
 
                     <p><a href="" onclick="logout();" id="logoutBtn">Logout</a> </p>
 
@@ -317,8 +331,41 @@
                 }
             })
         })
+
+
+
+
+
+        //================= logout ==========
+        let Cname = localStorage.getItem("user-name")
+        let cnamDiv = document.getElementById("cname")
+        cnamDiv.innerText = Cname
+
+        let nameShow = document.getElementById("userN")
+        let logoutbtn = document.getElementById("logoutBtn")
+
+
+        function logout() {
+            localStorage.removeItem('user-name');
+            localStorage.removeItem('user-email');
+
+        }
+
+
+        // ==========logout==============
     </script>
-    <script src="script/index.js"></script>
+
+    <script src="script/login.js"></script>
+
+
+    <script>
+        if (loginStatus == false) {
+            document.getElementById("logoutBtn").style.display = "none"
+        } else {
+            document.getElementById("logoutBtn").classList.remove("hide")
+        }
+    </script>
+
 </body>
 
 </html>

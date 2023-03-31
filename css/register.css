@@ -1,3 +1,50 @@
+body {
+    background-color: #f9f9f9;
+}
+
 .register-form {
     padding: 200px 0;
+}
+
+#regisFrom,
+#loginFrom {
+    background-color: #fbfbfb;
+    padding: 17px;
+    border-top: 1px sold #000;
+    border-top: 7px solid #ffa824;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.registerBtn {
+    border: 0;
+    border-radius: 0;
+    background-color: #e4aa52;
+}
+
+.registerBtn:hover {
+    border: 0;
+    border-radius: 0;
+    background-color: #d19945;
+}
+
+.reg {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background-color: #fbfbfb;
+    border-bottom-color: #adadad;
+    border-radius: 0;
+    margin: 30px 0;
+}
+
+.reg:focus {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background-color: #fbfbfb;
+    border-bottom: 2px solid;
+    border-bottom-color: #f09e22;
+    border-radius: 0;
+    margin: 30px 0;
+    box-shadow: none;
 }

@@ -29,4 +29,17 @@ logform.addEventListener("submit", function(e) {
     } else {
         alert("Incorrect login credentials")
     }
+
+    if (loginStatus == false) {
+        document.getElementById("logoutBtn").style.display = "none"
+    } else {
+        document.getElementById("logoutBtn").classList.remove("hide")
+    }
+
+    // if (loginStatus == true) {
+    //     document.getElementById("userN").classList.add("hide")
+    // } else {
+    //     document.getElementById("userN").classList.remove("hide")
+    // }
+
 })
