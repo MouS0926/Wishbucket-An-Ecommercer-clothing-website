@@ -4,13 +4,45 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wish Bucket</title>
+    <title>Wish Bucket | Product</title>
 
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
     ">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+        .orderCard {
+            border-radius: 0;
+            padding: 5px 15px;
+        }
+        
+        .order-head {
+            font-weight: 700;
+            color: #565656;
+        }
+        
+        .proceed-btn {
+            background-color: #efb151;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            padding: 6px 0;
+        }
+        
+        .address-card {
+            padding: 10px;
+            border-radius: 0;
+            margin-top: 20px;
+        }
+        
+        #addressBtn {
+            background-color: #efb151;
+            border: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+    </style>
 
 </head>
 
@@ -30,7 +62,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html" aria-hidden="true"></i>Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -101,22 +133,19 @@
 
                     <div class="search-and-icons">
                         <form class="d-flex mb-2 me-2" role="search">
-                            <input class="form-control me-2" type="search" aria-label="Search" placeholder="Search">
+                            <input class="form-control me-2" type="search" aria-label="Search" id="search" placeholder="Search">
                         </form>
                         <div class="user-icons d-flex mb-2">
 
-                            <div class="wishlist"><i class="bi bi-heart"></i></div>
-                            <div class="cart"><i class="bi bi-cart3"></i></div>
+                            <a href="" class="wishlist"><i class="bi bi-heart"></i></a>
+                            <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
                         </div>
                     </div>
 
                 </ul>
                 <!-- search -->
                 <div class="contact-info d-md-flex">
-                    <p><a href="register.html" id="userN">Sign In/Register </a>
-
-                    </p>
-                    <p id="cname"></p>
+                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'));</script></a> </p>
 
                     <p><a href="" onclick="logout();" id="logoutBtn">Logout</a> </p>
 
@@ -128,38 +157,65 @@
     </nav>
 
     <!--************************ navbarend *************************-->
-    <section class="register-form">
-        <div class="container-fluid">
-            <div class="row justify-content-md-center">
 
-                <div class="col-md-5">
-                    <form id="loginFrom">
+    <section class="product-section">
+        <div class="container">
+            <div class="row ">
 
-                        <h4>Welcome to WISH BUCKET</h4>
+                <div class="col-md-8">
+                    <div class="row" id="cart-row">
 
 
-                        <div class="mb-3">
 
-                            <input type="email" id="email" class="form-control reg" placeholder="Email">
-                        </div>
 
-                        <div class="mb-3">
+                    </div>
+                </div>
 
-                            <input type="password" id="psw" class="form-control reg" placeholder="Password">
-                        </div>
+                <div class="col-md-4">
+                    <div class="card orderCard">
+                        <table>
+                            <tbody id="orderDetails">
 
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary registerBtn">Submit</button>
-                            <p>Do not have Account? <a href="/register.html">Sign Up</a></p>
-                        </div>
-                    </form>
 
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="card address-card">
+                        <h5>Add Shipping Address</h5>
+                        <form id="checkform">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="adress" placeholder="Enter  Address">
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="city" placeholder="Enter  City">
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="pin" placeholder="Enter  Pincode">
+                            </div>
+
+
+                            <input type="submit" id="addressBtn" class="btn btn-primary ">
+                        </form>
+                    </div>
+
+
+
+                    <div class="card show-address" id="showAdd">
+
+
+
+                    </div>
 
                 </div>
             </div>
-
         </div>
     </section>
+
+
 
 
 
@@ -237,7 +293,9 @@
 
     <!--********************************** footerEnd *********************************-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="script/login.js"></script>
+
+
+    <script src="script/checkout.js"></script>
 </body>
 
 </html>

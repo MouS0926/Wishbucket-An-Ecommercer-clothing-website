@@ -123,7 +123,7 @@
                         <div class="user-icons d-flex mb-2">
 
                             <div class="wishlist"><i class="bi bi-heart"></i></div>
-                            <div class="cart"><i class="bi bi-cart3"></i></div>
+                            <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
                         </div>
                     </div>
 
@@ -336,6 +336,13 @@
 
 
 
+
+
+
+
+
+
+
         //================= logout ==========
         let Cname = localStorage.getItem("user-name")
         let cnamDiv = document.getElementById("cname")
@@ -348,23 +355,16 @@
         function logout() {
             localStorage.removeItem('user-name');
             localStorage.removeItem('user-email');
-
+            loginStatus = false
         }
 
 
         // ==========logout==============
     </script>
 
-    <script src="script/login.js"></script>
+    <!-- <script src="script/login.js"></script> -->
 
 
-    <script>
-        if (loginStatus == false) {
-            document.getElementById("logoutBtn").style.display = "none"
-        } else {
-            document.getElementById("logoutBtn").classList.remove("hide")
-        }
-    </script>
 
 </body>
 

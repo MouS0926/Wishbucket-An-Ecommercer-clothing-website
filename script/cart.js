@@ -105,9 +105,82 @@
  }
 
 
+
  if (datacart.length == 0) {
-     alert("No Product")
+     cartRow.innerText = "No Product"
 
  } else {
      displayProduct(datacart)
+ }
+
+
+ let sum = 0
+ for (let i = 0; i < datacart.length; i++) {
+     sum += datacart[i].price * datacart[i].quantity
+ }
+
+ orderDetails()
+
+ function orderDetails() {
+     let ordertbody = document.getElementById("orderDetails")
+     let tr1 = document.createElement("tr")
+     let tr2 = document.createElement("tr")
+     let tr3 = document.createElement("tr")
+
+
+     let head = document.createElement("td")
+     head.setAttribute("colspan", "2")
+     head.setAttribute("class", "order-head")
+
+     head.innerText = "ORDER DETAILS"
+     tr1.append(head)
+
+     let amountTd = document.createElement("td")
+     amountTd.innerText = "Total Amount:"
+     let amount = document.createElement("td")
+     amount.innerText = `₹${sum}`
+     tr2.append(amountTd, amount)
+
+     let proceed = document.createElement("td")
+     proceed.setAttribute("colspan", "2")
+     proceed.setAttribute("class", "proceed-btn")
+     tr3.append(proceed)
+
+     proceed.innerText = "PROCEED TO SHIPPING"
+
+     ordertbody.append(tr1, tr2, tr3)
+ }
+
+
+
+
+
+ //  store data in LS for checkout
+ let checkoutLS = JSON.parse(localStorage.getItem("checkout")) || []
+ let proceedBtn = document.querySelector(".proceed-btn")
+
+
+ proceedBtn.addEventListener("click", function() {
+     datacart.forEach(function(e) {
+
+         if (!checkAvailable(e)) {
+             checkoutLS.push(e)
+             localStorage.setItem("checkout", JSON.stringify(checkoutLS))
+             window.location.href = "checkout.html"
+         } else {
+             window.location.href = "checkout.html"
+         }
+
+     })
+
+
+ })
+
+ function checkAvailable(ele) {
+     for (let i = 0; i < checkoutLS.length; i++) {
+         if (ele.id == checkoutLS[i].id) {
+             return true
+         }
+     }
+     return false
  }
