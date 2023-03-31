@@ -24,9 +24,10 @@ logform.addEventListener("submit", function(e) {
         localStorage.setItem("user-name", current_user.name)
         localStorage.setItem("user-email", current_user.email)
 
-        window.location.href = "index.html"
+        // window.location.href = "index.html"
 
     } else {
+
         alert("Incorrect login credentials")
     }
 

@@ -11,7 +11,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
     ">
     <link rel="stylesheet" href="css/product.css">
-
+    <style>
+        .orderCard {
+            border-radius: 0;
+            padding: 5px 15px;
+        }
+        
+        .order-head {
+            font-weight: 700;
+            color: #565656;
+        }
+        
+        .proceed-btn {
+            background-color: #efb151;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            padding: 6px 0;
+        }
+    </style>
 
 </head>
 
@@ -134,37 +152,6 @@
                 <div class="col-md-8">
                     <div class="row" id="cart-row">
 
-                        <!-- <div class="card cartProd">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="Image/Product/Women/10.jpg" alt="" style="width:100%">
-                                </div>
-
-
-                                <div class="col-md-4">
-
-                                    <p>brand-totle title</p>
-                                    <p>details Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-
-
-                                </div>
-                                <div class="col-md-4">
-
-
-
-                                    <button>-</button>
-                                    <span>10</span>
-                                    <button>+</button>
-                                    <h5>price:100</h5>
-                                    <button>delete</button>
-
-
-                                </div>
-
-                            </div>
-                        </div> -->
-
 
 
 
@@ -172,14 +159,11 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card orderCard">
                         <table>
-                            <tbody>
+                            <tbody id="orderDetails">
 
-                                <tr>
-                                    <td>Order-details</td>
-                                    <td></td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
