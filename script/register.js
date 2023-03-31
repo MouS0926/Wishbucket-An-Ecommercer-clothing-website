@@ -20,8 +20,11 @@ regform.addEventListener("submit", function(e) {
     })
     console.log(exist)
 
+
     if (!exist) {
         alert("Registered Successfully")
+
+
         regData.push(data)
         localStorage.setItem("register", JSON.stringify(regData))
         regform.reset();

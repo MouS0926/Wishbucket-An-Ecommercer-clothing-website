@@ -166,14 +166,15 @@ function displayProduct(data) {
             prodCol.setAttribute("class", "col-md-4")
 
             let card = document.createElement("div")
-            card.setAttribute("class", "card")
+            card.setAttribute("class", "card product-card")
 
             let image = document.createElement("img")
-            let brand = document.createElement("h5")
+            let brand = document.createElement("h6")
             let title = document.createElement("p")
             let category = document.createElement("p")
             let price = document.createElement("p")
             let cartBtn = document.createElement("button")
+            price.style.fontWeight = "700"
             cartBtn.setAttribute("class", "btn btn-outline-primary")
             cartBtn.setAttribute("type", "button")
 
@@ -181,7 +182,7 @@ function displayProduct(data) {
             brand.innerText = el.brand
             title.innerText = el.title
             category.innerText = el.category
-            price.innerText = el.price
+            price.innerText = `₹ ${el.price}`
             cartBtn.innerText = "Add to Cart"
 
 

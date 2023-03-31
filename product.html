@@ -107,7 +107,7 @@
                         <div class="user-icons d-flex mb-2">
 
                             <div class="wishlist"><i class="bi bi-heart"></i></div>
-                            <div class="cart"><i class="bi bi-cart3"></i></div>
+                            <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
                         </div>
                     </div>
 
@@ -128,7 +128,7 @@
     <!--************************ navbarend *************************-->
 
     <section class="product-section">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <!--========= brand ===========-->
@@ -165,7 +165,20 @@
                 </div>
                 <div class="col-md-9">
 
-                    <div class="row">
+
+                    <div class="product-top">
+                        <div><span id="total-product"></span> Items Found</div>
+                        <div>
+                            <select id="sortprice">
+                                <option value="">Select Price</option>
+                                <option value="htl">Price(Higest First) </option>
+                                <option value="lth">Price(Lowest First)</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="row">
                         <div class="col-md-6"><span id="total-product"></span> Items Found</div>
                         <div class="col-md-6">
                             <select id="sortprice">
@@ -174,7 +187,9 @@
                                 <option value="lth">Price(Lowest First)</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
+
+
                     <div class="row" id="product-row">
 
 
