@@ -44,6 +44,10 @@ function displayProduct(data) {
 
 
 
+
+
+
+
         div3.append(qty, price)
         div2.append(brand, title, desc)
         div1.append(prodImg)
@@ -94,7 +98,6 @@ function orderDetails() {
     amount.innerText = `₹${sum}`
     tr2.append(amountTd, amount)
 
-
     ordertbody.append(tr1, tr2)
 }
 
@@ -103,34 +106,33 @@ function orderDetails() {
 
 
 
-function checkAvailable(ele) {
-    for (let i = 0; i < checkoutLS.length; i++) {
-        if (ele.id == checkoutLS[i].id) {
-            return true
-        }
-    }
-    return false
-}
+
+
+// show-shipping-address
+let address = JSON.parse(localStorage.getItem("address")) || {}
 
 
 
-let address = JSON.parse(localStorage.getItem("address"))
+let addreShow = document.getElementById("showAdd")
+addreShow.setAttribute("class", "card show-address")
 
-let checkForm = document.getElementById("checkform")
-let addressin = document.getElementById("adress")
-let cityin = document.getElementById("city")
-let pinin = document.getElementById("pin")
-checkForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-    let data = {
-        address: addressin.value,
-        city: cityin.value,
-        pin: pinin.value
-    }
-    localStorage.setItem("address", JSON.stringify(data))
+let addHead = document.createElement("h5")
+let addrs = document.createElement("p")
+let cit = document.createElement("p")
+let pincode = document.createElement("p")
 
-    window.location.href = "payment.html"
+addHead.innerText = "Delivery Address"
+addrs.innerText = `Address: ${address.address}`
+cit.innerText = `City: ${address.city}`
+pincode.innerText = `Pincode: ${address.pin}`
+
+addreShow.append(addHead, addrs, cit, pincode)
 
 
+// card-button-payment
 
+let cardBtn = document.getElementById("CardBtn")
+cardBtn.addEventListener("click", function(e) {
+    e.preventDefault()
+    window.location.href = "otp.html"
 })

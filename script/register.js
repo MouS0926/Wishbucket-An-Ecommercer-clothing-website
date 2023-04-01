@@ -28,6 +28,7 @@ regform.addEventListener("submit", function(e) {
         regData.push(data)
         localStorage.setItem("register", JSON.stringify(regData))
         regform.reset();
+        window.location.href = "login.html"
     } else {
         alert("Email already exist")
         regform.reset();

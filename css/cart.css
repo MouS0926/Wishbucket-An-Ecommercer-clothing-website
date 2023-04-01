@@ -1,0 +1,17 @@
+.cartProd {
+    padding: 10px 5px 0px 12px;
+}
+
+.incBTn {
+    border: 0;
+    background-color: #efaf4d;
+    padding: 5px 11px;
+    margin: 0 9px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.pricecls {
+    margin: 15px 10px;
+}

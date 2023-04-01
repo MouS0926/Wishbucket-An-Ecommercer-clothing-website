@@ -11,39 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
     ">
     <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/cart.css">
-    <style>
-        .orderCard {
-            border-radius: 0;
-            padding: 5px 15px;
-        }
-        
-        .order-head {
-            font-weight: 700;
-            color: #565656;
-        }
-        
-        .proceed-btn {
-            background-color: #efb151;
-            text-align: center;
-            color: #fff;
-            font-weight: 600;
-            padding: 6px 0;
-        }
-        
-        .address-card {
-            padding: 10px;
-            border-radius: 0;
-            margin-top: 20px;
-        }
-        
-        #addressBtn {
-            background-color: #efb151;
-            border: 0;
-            border-radius: 0;
-            width: 100%;
-        }
-    </style>
+
 
 </head>
 
@@ -138,7 +106,7 @@
                         </form>
                         <div class="user-icons d-flex mb-2">
 
-                            <a href="" class="wishlist"><i class="bi bi-heart"></i></a>
+                            <div class="wishlist"><i class="bi bi-heart"></i></div>
                             <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
                         </div>
                     </div>
@@ -161,58 +129,73 @@
 
     <section class="product-section">
         <div class="container">
-            <div class="row ">
+            <div class="row">
+                <div class="col-md-3">
+                    <!--========= brand ===========-->
 
-                <div class="col-md-8">
-                    <div class="row" id="cart-row">
-
-
-
-
+                    <h5>Brand</h5>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="aks" id="aks">
+                            <label for="starting">AKS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="jk" id="jk">
+                            <label for="reserves">JAIPUR KURTI</label>
+                        </div>
                     </div>
+                    <!--============= brandend =================-->
+
+
+                    <!--========= brand ===========-->
+                    <h5>Category</h5>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="kurta" id="kurta">
+                            <label for="starting">Kurtas & Kurtis  </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="startingReserves" value="top" id="top">
+                            <label for="reserves">Tops</label>
+                        </div>
+                    </div>
+                    <!--============= brandend =================-->
+
+
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card orderCard">
-                        <table>
-                            <tbody id="orderDetails">
+                <div class="col-md-9">
 
 
-                            </tbody>
-                        </table>
+                    <div class="product-top">
+                        <div><span id="total-product"></span> Items Found</div>
+                        <div>
+                            <select id="sortprice">
+                                <option value="">Select Price</option>
+                                <option value="htl">Price(Higest First) </option>
+                                <option value="lth">Price(Lowest First)</option>
+                            </select>
+                        </div>
                     </div>
 
 
-                    <div class="card address-card">
-                        <h5>Add Shipping Address</h5>
-                        <form id="checkform">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" required id="adress" placeholder="Enter  Address">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" required id="city" placeholder="Enter  City">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" required id="pin" placeholder="Enter  Pincode">
-                            </div>
+                    <!-- <div class="row">
+                        <div class="col-md-6"><span id="total-product"></span> Items Found</div>
+                        <div class="col-md-6">
+                            <select id="sortprice">
+                                <option value="">Select Price</option>
+                                <option value="htl">Price(Higest First) </option>
+                                <option value="lth">Price(Lowest First)</option>
+                            </select>
+                        </div>
+                    </div> -->
 
 
-                            <input type="submit" id="addressBtn" value="Proceed To Place Order" class="btn btn-primary ">
-                        </form>
-                    </div>
+                    <div class="row" id="product-row">
 
-
-
-                    <div class="card show-address" id="showAdd">
 
 
 
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -282,8 +265,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
 
+    <!-- <script src="script/index.js"></script> -->
+    <script src="script/man.js"></script>
 
-    <script src="script/checkout.js"></script>
 </body>
 
 </html>

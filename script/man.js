@@ -1,103 +1,105 @@
 let productData = [{
         id: 1,
-        title: "Floral Print Anarkali Kurta with Tie-Up",
-        brand: "AKS",
-        image: "../Image/Product/Women/1.jpg",
+        title: "Checked Slim Fit Shirt",
+        brand: "HRX",
+        image: "../Image/Product/Man/1.jpg",
         description: "Cotton Machine wash No Darts",
         price: 1300,
-        category: "Kurtas & Kurtis",
-        cat: "woman"
+        category: "Shirts",
+        cat: "man"
     },
     {
         id: 2,
-        title: "Paisley Print Straight Kurta",
-        brand: "AKS",
-        image: "../Image/Product/Women/2.jpg",
+        title: "Checked Slim Fit Shirt",
+        brand: "HRX",
+        image: "../Image/Product/Man/2.jpg",
         description: "Cotton Machine wash No Darts",
         price: 1360,
-        category: "Kurtas & Kurtis",
-        cat: "woman"
+        category: "Shirts",
+        cat: "man"
     },
     {
         id: 3,
-        title: "Checked Printed Regular Top",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/3.jpg",
+        title: "Checked Slim Fit Shirt",
+        brand: "HRX",
+        image: "../Image/Product/Man/3.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
         price: 790,
-        category: "Tops",
-        cat: "woman"
+        category: "Shirts",
+        cat: "man"
     },
     {
         id: 4,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/4.jpg",
+        title: "Checked Slim Fit Shirt",
+        brand: "HRX",
+        image: "../Image/Product/Man/4.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 1200,
+        category: "Shirts",
+        cat: "man"
     },
     {
         id: 5,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/5.jpg",
+        title: "Training Jacket",
+        brand: "HRX",
+        image: "../Image/Product/Man/5.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 1200,
+        category: "Jackets",
+        cat: "man"
     },
     {
         id: 6,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/6.jpg",
+        title: "Training Jacket",
+        brand: "ALLEN SOLLY",
+        image: "../Image/Product/Man/6.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 890,
+        category: "Jackets",
+        cat: "man"
     },
     {
         id: 7,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/7.jpg",
+        title: "Training Jacket",
+        brand: "ALLEN SOLLY",
+        image: "../Image/Product/Man/7.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 2345,
+        category: "Jackets",
+        cat: "man"
     },
     {
         id: 8,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/8.jpg",
+        title: "Training Jacket",
+        brand: "ALLEN SOLLY",
+        image: "../Image/Product/Man/8.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 3456,
+        category: "Jackets",
+        cat: "man"
     },
     {
         id: 9,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/9.jpg",
+        title: "Training Jacket",
+        brand: "ALLEN SOLLY",
+        image: "../Image/Product/Man/9.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 1100,
+        category: "Jackets",
+        cat: "man"
     },
     {
         id: 10,
-        title: "Checked Top with Mandarin Collar",
-        brand: "JAIPUR KURTI",
-        image: "../Image/Product/Women/10.jpg",
+        title: "Training Jacket",
+        brand: "ALLEN SOLLY",
+        image: "../Image/Product/Man/10.jpg",
         description: "We recommend you buy a size larger Hand wash, cotton, Fitted",
-        price: 670,
-        category: "Tops",
-        cat: "woman"
+        price: 450,
+        category: "Jackets",
+        cat: "man"
     },
+
+
 
 ]
 
@@ -148,7 +150,7 @@ function displayProduct(data) {
 
 
     data.filter((ele) => {
-            return ele.cat == "woman"
+            return ele.cat == "man"
         })
         .forEach(function(el) {
             let prodCol = document.createElement("div")
