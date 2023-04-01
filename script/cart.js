@@ -38,23 +38,30 @@
 
 
          let dec = document.createElement("button")
-         let qty = document.createElement("span")
-         let inc = document.createElement("button")
-         let price = document.createElement("h5")
-         let deleBtn = document.createElement("button")
+         dec.setAttribute("class", "incBTn")
 
+         let qty = document.createElement("span")
+
+         let inc = document.createElement("button")
+         inc.setAttribute("class", "incBTn")
+
+         let price = document.createElement("h5")
+         price.setAttribute("class", "pricecls")
+
+         let deleBtn = document.createElement("button")
+         deleBtn.setAttribute("class", "incBTn")
 
 
 
 
          prodImg.setAttribute("src", el.image)
          title.innerText = el.title
-         desc.innerText = el.description
+         desc.innerText = `Description: ${el.description}`
          brand.innerText = el.brand
          dec.innerText = "-"
          qty.innerText = +el.quantity
          inc.innerText = "+"
-         price.innerText = el.price * el.quantity
+         price.innerText = `₹ ${el.price * el.quantity}`
          deleBtn.innerText = "Remove"
 
          deleBtn.addEventListener("click", function() {
@@ -66,7 +73,9 @@
                  }
              })
              localStorage.setItem("cart", JSON.stringify(datacart))
+
              displayProduct(datacart)
+
          })
 
 

@@ -286,3 +286,33 @@
         margin-top: 77px;
     }
 }
+
+
+/**************************** footer ********************************/
+
+.footer-sec p,
+.footer-sec h5 {
+    color: #fff;
+}
+
+
+/**************************** footerEnd ********************************/
+
+
+/******************************** bottom-section *************/
+
+.bottom-sec {
+    background-color: #f1f1f1;
+    padding: 30px 0 0 0;
+}
+
+.bottom-div {
+    text-align: center;
+}
+
+.bottom-div i {
+    font-size: 29px;
+}
+
+
+/******************************** bottom-sectionEnd *************/

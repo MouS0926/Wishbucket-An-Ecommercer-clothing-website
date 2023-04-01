@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
     ">
     <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="css/cart.css">
     <style>
         .orderCard {
             border-radius: 0;
@@ -31,17 +30,10 @@
             padding: 6px 0;
         }
         
-        .address-card {
+        .show-address {
+            border-radius: 0;
             padding: 10px;
-            border-radius: 0;
-            margin-top: 20px;
-        }
-        
-        #addressBtn {
-            background-color: #efb151;
-            border: 0;
-            border-radius: 0;
-            width: 100%;
+            margin-top: 10px;
         }
     </style>
 
@@ -163,7 +155,7 @@
         <div class="container">
             <div class="row ">
 
-                <div class="col-md-8">
+                <div class="col-md-5">
                     <div class="row" id="cart-row">
 
 
@@ -172,7 +164,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="card orderCard">
                         <table>
                             <tbody id="orderDetails">
@@ -183,37 +175,74 @@
                     </div>
 
 
-                    <div class="card address-card">
-                        <h5>Add Shipping Address</h5>
-                        <form id="checkform">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" required id="adress" placeholder="Enter  Address">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" required id="city" placeholder="Enter  City">
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" required id="pin" placeholder="Enter  Pincode">
-                            </div>
-
-
-                            <input type="submit" id="addressBtn" value="Proceed To Place Order" class="btn btn-primary ">
-                        </form>
-                    </div>
-
-
-
                     <div class="card show-address" id="showAdd">
 
 
 
                     </div>
 
+                </div>
+
+
+
+
+                <div class="col-md-4">
+
+                    <div class="card p-3 shadow" style="">
+                        <h5 class="text-center p-2">Select Payment Mode</h5>
+                        <nav>
+                            <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-cd-tab" data-bs-toggle="tab" data-bs-target="#nav-credit" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Debit/Credit Card</button>
+                                <button class="nav-link" id="nav-cod-tab" data-bs-toggle="tab" data-bs-target="#nav-Cod" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Cash On Delivery</button>
+
+                            </div>
+                        </nav>
+                        <div class="tab-content p-3 border bg-light" id="nav-tabContent">
+                            <div class="tab-pane fade active show" id="nav-credit" role="tabpanel" aria-labelledby="nav-cd-tab">
+                                <form id="creditcard">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" required id="" placeholder="Enter Card No">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" required id="" placeholder="Enter Name On Card">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <input type="date" class="form-control" required id="" placeholder="Expiry Date">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" required id="" placeholder="Enter CVV">
+                                    </div>
+
+                                    <button class="btn btn-primary" id="CardBtn">Pay</button>
+                                    <!-- <input type="submit" id="CardBtn" value="Pay" class="btn btn-primary" style="width:100%"> -->
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="nav-Cod" role="tabpanel" aria-labelledby="nav-cod-tab">
+                                <button class="btn btn-primary">Place Order</button>
+                            </div>
+
+                        </div>
+                    </div>
 
 
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     </section>
@@ -283,7 +312,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
 
 
-    <script src="script/checkout.js"></script>
+    <script src="script/payment.js"></script>
 </body>
 
 </html>
