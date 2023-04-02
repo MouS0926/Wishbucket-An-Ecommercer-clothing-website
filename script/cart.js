@@ -111,12 +111,17 @@
      })
 
 
+
+
+
+
+
  }
 
 
-
+ let nocartText = document.getElementById("nocart")
  if (datacart.length == 0) {
-     cartRow.innerText = "No Product"
+     nocartText.innerText = "Your Cart Is Empty"
 
  } else {
      displayProduct(datacart)

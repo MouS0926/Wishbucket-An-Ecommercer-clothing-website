@@ -166,7 +166,7 @@ function displayProduct(data) {
             let price = document.createElement("p")
             let cartBtn = document.createElement("button")
             price.style.fontWeight = "700"
-            cartBtn.setAttribute("class", "btn btn-outline-primary")
+            cartBtn.setAttribute("class", "btn btn-outline-primary cartBTn")
             cartBtn.setAttribute("type", "button")
 
             image.setAttribute("src", el.image)

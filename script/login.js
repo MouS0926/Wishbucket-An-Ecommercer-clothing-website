@@ -14,6 +14,7 @@ logform.addEventListener("submit", function(e) {
     })
 
     let loginStatus = false
+
     if (exist) {
         alert("SignedIn Successfully")
         loginStatus = true

@@ -131,8 +131,17 @@ addreShow.append(addHead, addrs, cit, pincode)
 
 // card-button-payment
 
-let cardBtn = document.getElementById("CardBtn")
-cardBtn.addEventListener("click", function(e) {
+let creditForm = document.getElementById("creditcard")
+creditForm.addEventListener("submit", function(e) {
     e.preventDefault()
+    window.location.href = "otp.html"
+})
+
+
+// cash-on-delivery
+
+let codBtn = document.getElementById("cod")
+codBtn.addEventListener("click", function() {
+
     window.location.href = "otp.html"
 })

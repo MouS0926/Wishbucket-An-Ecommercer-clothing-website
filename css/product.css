@@ -15,6 +15,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     text-align: center;
     line-height: 13px;
+    padding: 6px;
 }
 
 .product-card p {
@@ -46,6 +47,24 @@ body {
 
 .product-top>div>span {
     font-weight: 700;
+}
+
+.cartBTn {
+    border-radius: 0;
+    background-color: #e7a745;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+.cartBTn:hover,
+.cartBTn:active {
+    border-radius: 0;
+    background-color: #d39539;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width:500px) {

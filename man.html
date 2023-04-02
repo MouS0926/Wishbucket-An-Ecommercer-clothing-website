@@ -20,9 +20,12 @@
 
     <!--************************ navbar *************************-->
 
+
+    <!--************************ navbar *************************-->
+
     <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary">
         <div class="container-xl">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="Logo/New Project.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,68 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="product.html">WOMEN</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                        <div class="nav-item dropdown-menu">
-                            <ul>
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                            </ul>
-                            <ul>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                            </ul>
-                            <ul>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                            </ul>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="man.html">MEN</a>
                     </li>
 
 
@@ -102,11 +50,11 @@
 
                     <div class="search-and-icons">
                         <form class="d-flex mb-2 me-2" role="search">
-                            <input class="form-control me-2" type="search" aria-label="Search" id="search" placeholder="Search">
+                            <input class="form-control me-2" type="search" id="search" aria-label="Search" placeholder="Search">
                         </form>
                         <div class="user-icons d-flex mb-2">
 
-                            <div class="wishlist"><i class="bi bi-heart"></i></div>
+                            <a href="wishlist.html" class="wishlist" style="margin-right: 5px;"><i class="bi bi-heart"></i></a>
                             <a href="cart.html" class="cart"><i class="bi bi-cart3"></i></a>
                         </div>
                     </div>
@@ -114,7 +62,10 @@
                 </ul>
                 <!-- search -->
                 <div class="contact-info d-md-flex">
-                    <p><a href="register.html" id="userN">Sign In/Register <script>document.write(localStorage.getItem('user-name'));</script></a> </p>
+                    <p><a href="register.html" id="userN">Sign In/Register </a>
+
+                    </p>
+                    <p id="cname"></p>
 
                     <p><a href="" onclick="logout();" id="logoutBtn">Logout</a> </p>
 
@@ -124,6 +75,10 @@
 
         </div>
     </nav>
+
+    <!--************************ navbarend *************************-->
+
+
 
     <!--************************ navbarend *************************-->
 
