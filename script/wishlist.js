@@ -18,7 +18,7 @@ function displayProduct(data) {
 
     data.forEach(function(el, i) {
         let prodCol = document.createElement("div")
-        prodCol.setAttribute("class", "col-md-3")
+        prodCol.setAttribute("class", "col-6 col-md-3")
 
         let card = document.createElement("div")
         card.setAttribute("class", "card product-card")

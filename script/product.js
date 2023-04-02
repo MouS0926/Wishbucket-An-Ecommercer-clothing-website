@@ -128,7 +128,7 @@ function displayProduct(data) {
         })
         .forEach(function(el) {
             let prodCol = document.createElement("div")
-            prodCol.setAttribute("class", "col-md-4")
+            prodCol.setAttribute("class", "col-6 col-md-4")
 
             let card = document.createElement("div")
             card.setAttribute("class", "card product-card")
@@ -261,6 +261,8 @@ sortprice.addEventListener("change", function() {
     })
     // sort by price
 
+
+// brand filter
 let brandFilter = document.getElementById("brandfilter")
 
 brandFilter.addEventListener("change", function() {
@@ -279,4 +281,26 @@ brandFilter.addEventListener("change", function() {
         displayProduct(filteredbrand)
 
     }
+})
+
+// brand filter end
+
+
+
+// price filter
+
+let lowerIn = document.getElementById("lower")
+let upperIn = document.getElementById("upper")
+let filterbtn = document.getElementById("filter-btn")
+
+filterbtn.addEventListener("click", function() {
+
+    let filtered = productData.filter(function(ele, ind) {
+        if (+ele.price >= +lowerIn.value && +ele.price <= +upperIn.value) {
+            return true
+        } else {
+            return false
+        }
+    })
+    displayProduct(filtered)
 })

@@ -140,7 +140,8 @@ sortprice.addEventListener("change", function() {
 })
 
 let cartData = JSON.parse(localStorage.getItem("cart")) || []
-    // sort by price
+
+let wishData = JSON.parse(localStorage.getItem("wish")) || []
 
 function displayProduct(data) {
     productRow.innerHTML = ""
@@ -154,7 +155,7 @@ function displayProduct(data) {
         })
         .forEach(function(el) {
             let prodCol = document.createElement("div")
-            prodCol.setAttribute("class", "col-md-4")
+            prodCol.setAttribute("class", "col-6 col-md-4")
 
             let card = document.createElement("div")
             card.setAttribute("class", "card product-card")
@@ -164,8 +165,24 @@ function displayProduct(data) {
             let title = document.createElement("p")
             let category = document.createElement("p")
             let price = document.createElement("p")
-            let cartBtn = document.createElement("button")
+
             price.style.fontWeight = "700"
+
+
+
+            let btndiv = document.createElement("div")
+            let cartBtn = document.createElement("button")
+
+            let wishBtn = document.createElement("button")
+            btndiv.append(cartBtn, wishBtn)
+
+            wishBtn.setAttribute("class", "btn btn-outline-primary cartBTn")
+            wishBtn.setAttribute("type", "button")
+
+
+
+
+
             cartBtn.setAttribute("class", "btn btn-outline-primary cartBTn")
             cartBtn.setAttribute("type", "button")
 
@@ -175,7 +192,7 @@ function displayProduct(data) {
             category.innerText = el.category
             price.innerText = `₹ ${el.price}`
             cartBtn.innerText = "Add to Cart"
-
+            wishBtn.innerText = "Add to Wislist"
 
 
             cartBtn.addEventListener("click", function() {
@@ -190,11 +207,21 @@ function displayProduct(data) {
                     alert("Product Added To Cart")
                 }
             })
+            wishBtn.addEventListener("click", function() {
+                if (wishAvailable(el)) {
+                    alert("Product is Already in the List")
+                } else {
+                    wishData.push(el)
+
+                    localStorage.setItem("wish", JSON.stringify(wishData))
+                    alert("Product Added To Wishlist")
+                }
+            })
 
 
             productRow.append(prodCol)
             prodCol.append(card)
-            card.append(image, brand, title, category, price, cartBtn)
+            card.append(image, brand, title, category, price, btndiv)
 
             localStorage.setItem("product", JSON.stringify(productData))
 
@@ -210,6 +237,17 @@ function checkAvailable(ele) {
     return false
 }
 
+// wish-availa
+function wishAvailable(ele) {
+    for (let i = 0; i < wishData.length; i++) {
+        if (ele.id == wishData[i].id) {
+            return true
+        }
+    }
+    return false
+}
+
+
 // search
 let searchIn = document.getElementById("search")
 searchIn.addEventListener("input", function() {
@@ -224,3 +262,43 @@ searchIn.addEventListener("input", function() {
 })
 
 // search End
+
+
+let brandFilter = document.getElementById("brandfilter")
+
+brandFilter.addEventListener("change", function() {
+    if (brandFilter.value == "") {
+        displayProduct(productData)
+    } else {
+        let filteredbrand = productData.filter(function(e, i) {
+            if (brandFilter.value == e.brand) {
+                return true
+            } else {
+                return false
+            }
+        })
+
+
+        displayProduct(filteredbrand)
+
+    }
+})
+
+
+// price filter
+
+let lowerIn = document.getElementById("lower")
+let upperIn = document.getElementById("upper")
+let filterbtn = document.getElementById("filter-btn")
+
+filterbtn.addEventListener("click", function() {
+
+    let filtered = productData.filter(function(ele, ind) {
+        if (+ele.price >= +lowerIn.value && +ele.price <= +upperIn.value) {
+            return true
+        } else {
+            return false
+        }
+    })
+    displayProduct(filtered)
+})

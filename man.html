@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wish Bucket | Product</title>
-
+    <title>Wish Bucket | Product (Men)</title>
+    <link rel="icon" type="image/x-icon" href="Logo/favicon.png">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css
@@ -86,35 +86,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <!--========= brand ===========-->
+                    <!-- filter -->
+                    <h5>Filter By Brand</h5>
+                    <select id="brandfilter">
+                            <option value="">Select Brand</option>
+                            <option value="HRX">HRX</option>
+                            <option value="ALLEN SOLLY">ALLEN SOLLY</option>
+                        </select>
+                    <hr>
 
-                    <h5>Brand</h5>
-                    <div>
-                        <div>
-                            <input type="checkbox" name="startingReserves" value="aks" id="aks">
-                            <label for="starting">AKS</label>
+                    <h5>Filter By Price Range</h5>
+                    <div id="pricefilter">
+
+                        <div class="priceInput">
+                            <input placeholder="From" type="number" id="lower" />
+                            <input placeholder="To" type="number" id="upper" />
                         </div>
-                        <div>
-                            <input type="checkbox" name="startingReserves" value="jk" id="jk">
-                            <label for="reserves">JAIPUR KURTI</label>
-                        </div>
+                        <button id="filter-btn">Filter</button>
                     </div>
-                    <!--============= brandend =================-->
-
-
-                    <!--========= brand ===========-->
-                    <h5>Category</h5>
-                    <div>
-                        <div>
-                            <input type="checkbox" name="startingReserves" value="kurta" id="kurta">
-                            <label for="starting">Kurtas & Kurtis  </label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="startingReserves" value="top" id="top">
-                            <label for="reserves">Tops</label>
-                        </div>
-                    </div>
-                    <!--============= brandend =================-->
 
 
                 </div>
@@ -184,10 +173,9 @@
                     <div class="col-md-4">
                         <h5 class="text-center">WISH BUCKET</h5>
                         <ul class="nav flex-column text-center">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">HOME</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">WOMAN</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">MAN</a></li>
-
+                            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-white">HOME</a></li>
+                            <li class="nav-item mb-2"><a href="product.html" class="nav-link p-0 text-white">WOMAN</a></li>
+                            <li class="nav-item mb-2"><a href="man.html" class="nav-link p-0 text-white">MAN</a></li>
                         </ul>
                     </div>
 

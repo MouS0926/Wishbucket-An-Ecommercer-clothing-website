@@ -290,6 +290,11 @@
     .carousel.main-slide {
         margin-top: 77px;
     }
+    .footer-sec p,
+    .footer-sec h5 {
+        color: #fff;
+        font-size: 13px;
+    }
 }
 
 

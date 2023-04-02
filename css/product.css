@@ -67,6 +67,30 @@ body {
     font-weight: 600;
 }
 
+.priceInput {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.priceInput input {
+    width: 47%;
+}
+
+#filter-btn {
+    border: 0;
+    background-color: #df992e;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#brandfilter {
+    width: 100%;
+    padding: 5px;
+}
+
 @media screen and (min-device-width: 320px) and (max-device-width:500px) {
     /* STYLES HERE */
     .product-top {
@@ -74,5 +98,13 @@ body {
         justify-content: space-between;
         padding: 20px 10px;
         flex-direction: column;
+    }
+    .cartBTn {
+        padding: 2px;
+        font-size: 9px;
+    }
+    .product-card p {
+        margin-bottom: 10px;
+        font-size: 10px;
     }
 }
